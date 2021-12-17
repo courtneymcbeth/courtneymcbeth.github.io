@@ -6,6 +6,8 @@
 <head>
   <link rel="stylesheet" href="{{site.baseurl}}/css/master.css">
   <script src="{{site.baseurl}}/js/pixi.js"></script>
+
+  <title>Courtney McBeth</title>
 </head>
 
 <body>
@@ -13,31 +15,36 @@
     let app = new PIXI.Application({ width: window.innerWidth, height: window.innerHeight, backgroundColor: 0x090E29 });
     document.body.appendChild(app.view);
 
-    x = Math.floor(Math.random() * (window.innerWidth - 1));
-    y = Math.floor(Math.random() * (window.innerHeight - 1));
+    num_per_color = 10
+    colors = [0x3AA95C]
 
-    var gr = new PIXI.Graphics();
-    gr.beginFill(0x3AA95C, 0.5);
-    gr.lineStyle(0);
-    gr.drawCircle(x, y, 30);
-    gr.endFill();
-
-    var texture = app.renderer.generateTexture(gr);
-    var sprite = new PIXI.Sprite(texture);
-
-    app.stage.addChild(sprite);
-
-    // Add a variable to count up the seconds our demo has been running
     let elapsed = 0.0;
-    // Tell our application's ticker to run a new callback every frame, passing
-    // in the amount of time that has passed since the last tick
-    app.ticker.add((delta) => {
-      // Add the time to our total elapsed time
-      elapsed += delta;
-      // Update the sprite's X position based on the cosine of our elapsed time.  We divide
-      // by 50 to slow the animation down a bit...
-      sprite.x = 100.0 + Math.cos(elapsed / 50.0) * 100.0;
-    });
+
+    y = 0
+
+    for (let i = 0; i < colors.length; ++i) {
+      const color = colors[i];
+
+      var gr = new PIXI.Graphics();
+      gr.beginFill(0x3AA95C, 0.7);
+      gr.lineStyle(0);
+      gr.drawCircle(0, y, 30);
+      gr.endFill();
+
+      y = y + 20
+
+      for (let j = 0; j < num_per_color; ++j) {
+        var texture = app.renderer.generateTexture(gr);
+        var sprite = new PIXI.Sprite(texture);
+
+        app.stage.addChild(sprite);
+
+        app.ticker.add((delta) => {
+          elapsed += delta;
+          sprite.x = 100.0 + Math.cos(elapsed / 50.0) * 100.0;
+        });
+      }
+    }
   </script>
 </body>
 
