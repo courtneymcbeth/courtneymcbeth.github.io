@@ -12,7 +12,7 @@ let app = new PIXI.Application({
   autoDensity: true,
   resolution: 2
 });
-document.body.appendChild(app.view);
+document.body.prepend(app.view);
 
 // Bubbles
 num_per_color = 10
@@ -26,7 +26,7 @@ for (let i = 0; i < colors.length; ++i) {
   const color = colors[i];
 
   var gr = new PIXI.Graphics();
-  gr.beginFill(0x3AA95C, 0.7);
+  gr.beginFill(color, 0.7);
   gr.lineStyle(0);
   gr.drawCircle(30, 30, 30);
   gr.endFill();
