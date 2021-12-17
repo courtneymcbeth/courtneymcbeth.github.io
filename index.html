@@ -65,12 +65,12 @@
 
       for (let i = 0; i < sprites.length; ++i) {
         if (ticks % 20 == 0) {
-          vel_x[i] = getRandomInt(6)
-          vel_y[i] = getRandomInt(6)
+          vel_x[i] = getRandomInt(5)
+          vel_y[i] = getRandomInt(5)
         }
 
-        sprites[i].x += (vel_x[i] - 1) / 4.0
-        sprites[i].y += (vel_y[i] - 1) / 4.0
+        sprites[i].x += (vel_x[i] - 2) / 4.0
+        sprites[i].y += (vel_y[i] - 2) / 4.0
       }
 
       ticks += 1
@@ -79,18 +79,14 @@
     // Text
     const style = new PIXI.TextStyle({
       fontFamily: 'Arial',
-      fontSize: 72,
-      fill: '#ffffff',
-      dropShadow: true,
-      dropShadowColor: '#000000',
-      dropShadowBlur: 4,
-      dropShadowAngle: Math.PI / 6,
-      dropShadowDistance: 6,
+      fontSize: 84,
+      fill: '#ffffff'
     });
 
     const title = new PIXI.Text('Courtney McBeth', style);
     title.x = Math.round(window.innerWidth / 2);
     title.y = Math.round(window.innerHeight / 2);
+    title.anchor.set(0.5)
     app.stage.addChild(title);
   </script>
 
