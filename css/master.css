@@ -18,6 +18,15 @@ html, body {
   position: absolute;
   left:0;
   top:0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-middle {
+  text-align: center;
+  color: #F6F2F3;
+  border: #F6F2F3 5px solid;
 }
 
 .green {

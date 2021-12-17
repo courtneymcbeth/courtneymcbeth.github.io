@@ -16,7 +16,7 @@ document.body.prepend(app.view);
 
 // Bubbles
 num_per_color = 10
-colors = [0x3AA95C, 0xF6F2F3]
+colors = [0x3AA95C, 0xF6F2F3, 0xCA3368]
 
 sprites = []
 vel_x = []
