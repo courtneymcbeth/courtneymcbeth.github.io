@@ -16,19 +16,20 @@ document.body.prepend(app.view);
 
 // Bubbles
 num_per_color = 10
-colors = [0x3AA95C, 0xF6F2F3, 0xCA3368]
+// colors = [0x3AA95C, 0xF6F2F3, 0xCA3368]
+alphas = [0.2, 0.5, 0.7]
 
 sprites = []
 vel_x = []
 vel_y = []
 
 for (let i = 0; i < colors.length; ++i) {
-  const color = colors[i];
+  const alpha = alphas[i];
 
   var gr = new PIXI.Graphics();
-  gr.beginFill(color, 0.7);
+  gr.beginFill(0x3AA95C, alpha);
   gr.lineStyle(0);
-  gr.drawCircle(30, 30, 30);
+  gr.drawCircle(60, 60, 60);
   gr.endFill();
 
   for (let j = 0; j < num_per_color; ++j) {

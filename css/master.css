@@ -27,6 +27,19 @@ html, body {
   text-align: center;
   color: #F6F2F3;
   border: #F6F2F3 5px solid;
+  padding: 50px;
+}
+
+.center-middle h1 {
+  font-size: 100pt;
+}
+
+.center-middle h2 {
+  font-size: 70pt;
+}
+
+.center-middle h3 {
+  font-size: 50pt;
 }
 
 .green {
