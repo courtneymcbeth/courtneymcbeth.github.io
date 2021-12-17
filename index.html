@@ -4,6 +4,7 @@
 <html>
 
 <head>
+  <link rel="stylesheet" href="{{site.baseurl}}/css/master.css">
   <script src="{{site.baseurl}}/js/pixi.js"></script>
 </head>
 
@@ -11,8 +12,17 @@
   <script>
     let app = new PIXI.Application({ width: window.innerWidth, height: window.innerHeight });
     document.body.appendChild(app.view);
-    let sprite = PIXI.Sprite.from('sample.png');
-    app.stage.addChild(sprite);
+
+    var gr = new PIXI.Graphics();
+    gr.beginFill(0x3AA95C);
+    gr.lineStyle(0);
+    gr.drawCircle(30, 30, 30);
+    gr.endFill();
+
+    var texture = app.renderer.generateTexture(gr);
+    var sprite = new PIXI.Sprite(texture);
+
+    app.stage.addChild(circle);
 
     // Add a variable to count up the seconds our demo has been running
     let elapsed = 0.0;
