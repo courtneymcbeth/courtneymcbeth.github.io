@@ -1,6 +1,7 @@
 * {    
   margin: 0 !important;
   padding: 0 !important;
+  font-family: 'Quicksand', sans-serif;
 }
 
 html, body {
@@ -31,15 +32,15 @@ html, body {
 }
 
 .center-middle h1 {
-  font-size: 100pt;
+  font-size: 50pt;
 }
 
 .center-middle h2 {
-  font-size: 70pt;
+  font-size: 40pt;
 }
 
 .center-middle h3 {
-  font-size: 50pt;
+  font-size: 30pt;
 }
 
 .green {

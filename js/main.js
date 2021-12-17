@@ -23,7 +23,7 @@ sprites = []
 vel_x = []
 vel_y = []
 
-for (let i = 0; i < colors.length; ++i) {
+for (let i = 0; i < alphas.length; ++i) {
   const alpha = alphas[i];
 
   var gr = new PIXI.Graphics();
