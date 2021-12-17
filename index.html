@@ -16,9 +16,16 @@
       return Math.floor(Math.random() * max);
     }
 
-    let app = new PIXI.Application({ width: window.innerWidth, height: window.innerHeight, backgroundColor: 0x090E29 });
+    let app = new PIXI.Application({
+      width: window.innerWidth,
+      height: window.innerHeight,
+      backgroundColor: 0x090E29,
+      antialias: true,
+      autoDensity: true
+    });
     document.body.appendChild(app.view);
 
+    // Bubbles
     num_per_color = 10
     colors = [0x3AA95C]
 
@@ -56,17 +63,33 @@
       elapsed += delta;
 
       for (let i = 0; i < sprites.length; ++i) {
-        if (ticks % 5 == 0) {
+        if (ticks % 20 == 0) {
           vel_x[i] = getRandomInt(3)
           vel_y[i] = getRandomInt(3)
         }
 
-        sprites[i].x += vel_x[i] - 1
-        sprites[i].y += vel_y[i] - 1
+        sprites[i].x += (vel_x[i] - 1) / 2.0
+        sprites[i].y += (vel_y[i] - 1) / 2.0
       }
 
       ticks += 1
     });
+
+    // Text
+    const style = new PIXI.TextStyle({
+      fontFamily: 'Arial',
+      fontSize: 72,
+      fill: '#ffffff',
+      dropShadow: true,
+      dropShadowColor: '#000000',
+      dropShadowBlur: 4,
+      dropShadowAngle: Math.PI / 6,
+      dropShadowDistance: 6,
+    });
+
+    const title = new PIXI.Text('Courtney McBeth', style);
+    title.x = Math.round(window.innerWidth / 2);
+    title.y = Math.round(window.innerHeight / 2);
   </script>
 
   <div>
