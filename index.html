@@ -12,6 +12,10 @@
 
 <body>
   <script>
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    }
+
     let app = new PIXI.Application({ width: window.innerWidth, height: window.innerHeight, backgroundColor: 0x090E29 });
     document.body.appendChild(app.view);
 
@@ -29,14 +33,12 @@
       gr.drawCircle(30, 30, 30);
       gr.endFill();
 
-      y = 0
-
       for (let j = 0; j < num_per_color; ++j) {
         var texture = app.renderer.generateTexture(gr);
         var sprite = new PIXI.Sprite(texture);
         sprites.push(sprite)
-        sprite.y = y
-        y = y + 20
+        sprite.y = getRandomInt(window.innerHeight)
+        sprite.x = getRandomInt(window.innerWidth)
 
         app.stage.addChild(sprite);
       }
@@ -46,7 +48,8 @@
     app.ticker.add((delta) => {
       elapsed += delta;
       for (let i = 0; i < sprites.length; ++i) {
-        sprites[i].x = 100.0 + Math.cos(elapsed / 50.0) * 100.0;
+        sprites[i].x += getRandomInt(3) - 2
+        sprites[i].y += getRandomInt(3) - 2
       }
     });
   </script>
