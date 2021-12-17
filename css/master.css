@@ -45,6 +45,17 @@ html, body {
   font-size: 30pt;
 }
 
+.content {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .green {
   background-color: #3AA95C;
 }
