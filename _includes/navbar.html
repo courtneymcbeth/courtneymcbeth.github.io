@@ -1,0 +1,34 @@
+<nav id="overall_nav" class="main_nav">
+  <div class="logo">
+    <a class="nav_logo" href="{{ site.baseurl }}">
+      <img alt="Nav Logo" src="{{ site.baseurl }}/images/nav_sticker.png" height="60" width="250">
+    </a>
+  </div>
+
+  <ul>
+    <li id="search_bar">
+      <i class="fa fa-search"></i>
+      <form action="{{ site.baseurl }}/search.html" method="get" autocomplete="off">
+        <input id="nav_search" type="text" name="query" placeholder="Search Guides">
+        <input id="search_button" style="display: none;" type="submit" value="search">
+      </form>
+    </li>
+    <li class="large_only"><a href="https://cusail.engineering.cornell.edu/">About CUSail</a></li>
+    <!-- <li><a href="{{ site.baseurl }}/progress_gateway.html">Progress</a></li> -->
+    <li><a href="https://cusail-navigation.github.io/raspberrypi/">Documentation</a></li>
+    <!-- <li class="large_only"><a href="https://www.sailbot.org/">Competition</a>
+      <ul class="subnav no_scroll">
+        <li><a href="{{ site.baseurl }}/index.html#events_table">Events</a></li>
+      </ul>
+    </li> -->
+    <li class="large_only"><a href="{{ site.baseurl }}/index.html#guides">How-To Guides</a>
+      <ul class="subnav no_scroll">
+        {% for post in site.posts %}
+        {% if post.layout == "landing"%}
+        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title | remove: "Guides" }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </li>
+  </ul>
+</nav>
