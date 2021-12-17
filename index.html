@@ -13,10 +13,13 @@
     let app = new PIXI.Application({ width: window.innerWidth, height: window.innerHeight, backgroundColor: 0x090E29 });
     document.body.appendChild(app.view);
 
+    x = Math.floor(Math.random() * (window.innerWidth - 1));
+    y = Math.floor(Math.random() * (window.innerHeight - 1));
+
     var gr = new PIXI.Graphics();
-    gr.beginFill(0x3AA95C);
+    gr.beginFill(0x3AA95C, 0.5);
     gr.lineStyle(0);
-    gr.drawCircle(30, 30, 30);
+    gr.drawCircle(x, y, 30);
     gr.endFill();
 
     var texture = app.renderer.generateTexture(gr);
