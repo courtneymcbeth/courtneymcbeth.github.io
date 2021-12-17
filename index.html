@@ -51,10 +51,12 @@
     }
 
     let elapsed = 0.0;
+    ticks = 0
     app.ticker.add((delta) => {
       elapsed += delta;
+
       for (let i = 0; i < sprites.length; ++i) {
-        if (elapsed % 5 == 0) {
+        if (ticks % 5 == 0) {
           vel_x[i] = getRandomInt(3)
           vel_y[i] = getRandomInt(3)
         }
@@ -62,6 +64,8 @@
         sprites[i].x += vel_x[i] - 1
         sprites[i].y += vel_y[i] - 1
       }
+
+      ticks += 1
     });
   </script>
 
