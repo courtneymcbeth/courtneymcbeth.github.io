@@ -23,6 +23,8 @@
     colors = [0x3AA95C]
 
     sprites = []
+    vel_x = []
+    vel_y = []
 
     for (let i = 0; i < colors.length; ++i) {
       const color = colors[i];
@@ -37,8 +39,12 @@
         var texture = app.renderer.generateTexture(gr);
         var sprite = new PIXI.Sprite(texture);
         sprites.push(sprite)
+
         sprite.y = getRandomInt(window.innerHeight)
         sprite.x = getRandomInt(window.innerWidth)
+
+        vel_x.push(0)
+        vel_y.push(0)
 
         app.stage.addChild(sprite);
       }
@@ -48,11 +54,21 @@
     app.ticker.add((delta) => {
       elapsed += delta;
       for (let i = 0; i < sprites.length; ++i) {
-        sprites[i].x += getRandomInt(3) - 1
-        sprites[i].y += getRandomInt(3) - 1
+        if (elapsed % 5 == 0) {
+          vel_x[i] = getRandomInt(3)
+          vel_y[i] = getRandomInt(3)
+        }
+
+        sprites[i].x += vel_x[i] - 1
+        sprites[i].y += vel_y[i] - 1
       }
     });
   </script>
+
+  <div>
+    <h1>Hello</h1>
+    <p>Hello again...</p>
+  </div>
 </body>
 
 </html>
