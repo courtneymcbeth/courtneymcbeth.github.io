@@ -18,9 +18,7 @@
     num_per_color = 10
     colors = [0x3AA95C]
 
-    let elapsed = 0.0;
-
-    y = 0
+    sprites = []
 
     for (let i = 0; i < colors.length; ++i) {
       const color = colors[i];
@@ -28,23 +26,29 @@
       var gr = new PIXI.Graphics();
       gr.beginFill(0x3AA95C, 0.7);
       gr.lineStyle(0);
-      gr.drawCircle(0, y, 30);
+      gr.drawCircle(30, 30, 30);
       gr.endFill();
 
-      y = y + 20
+      y = 0
 
       for (let j = 0; j < num_per_color; ++j) {
         var texture = app.renderer.generateTexture(gr);
         var sprite = new PIXI.Sprite(texture);
+        sprites.push(sprite)
+        sprite.y = y
+        y = y + 20
 
         app.stage.addChild(sprite);
-
-        app.ticker.add((delta) => {
-          elapsed += delta;
-          sprite.x = 100.0 + Math.cos(elapsed / 50.0) * 100.0;
-        });
       }
     }
+
+    let elapsed = 0.0;
+    app.ticker.add((delta) => {
+      elapsed += delta;
+      for (let i = 0; i < sprites.length; ++i) {
+        sprites[i].x = 100.0 + Math.cos(elapsed / 50.0) * 100.0;
+      }
+    });
   </script>
 </body>
 
