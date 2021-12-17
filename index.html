@@ -10,7 +10,7 @@
 
 <body>
   <script>
-    let app = new PIXI.Application({ width: window.innerWidth, height: window.innerHeight });
+    let app = new PIXI.Application({ width: window.innerWidth, height: window.innerHeight, backgroundColor: 0x090E29 });
     document.body.appendChild(app.view);
 
     var gr = new PIXI.Graphics();
@@ -22,7 +22,7 @@
     var texture = app.renderer.generateTexture(gr);
     var sprite = new PIXI.Sprite(texture);
 
-    app.stage.addChild(circle);
+    app.stage.addChild(sprite);
 
     // Add a variable to count up the seconds our demo has been running
     let elapsed = 0.0;
