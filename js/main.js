@@ -14,6 +14,9 @@ let app = new PIXI.Application({
 });
 document.body.prepend(app.view);
 
+var container = new PIXI.Container();
+app.stage.addChild(container);
+
 // Bubbles
 num_per_color = 10
 // colors = [0x3AA95C, 0xF6F2F3, 0xCA3368]
@@ -43,9 +46,12 @@ for (let i = 0; i < alphas.length; ++i) {
     vel_x.push(0)
     vel_y.push(0)
 
-    app.stage.addChild(sprite);
+    container.addChild(sprite);
   }
 }
+
+container.cacheAsBitmap = true;
+container.scale.set(0.5);
 
 app.ticker.add((delta) => {
   for (let i = 0; i < sprites.length; ++i) {
