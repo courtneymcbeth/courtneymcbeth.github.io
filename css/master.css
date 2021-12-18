@@ -97,6 +97,7 @@ nav ul li a, nav div a {
 
 .content h2 {
   font-size: 30pt;
+  margin-bottom: 20px;
 }
 
 .content p {
@@ -117,4 +118,5 @@ footer {
 footer h6 {
   text-align: end;
   margin: 5px 100px;
+  font-size: 10pt;
 }
