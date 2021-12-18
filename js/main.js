@@ -53,18 +53,23 @@ app.ticker.add((delta) => {
   elapsed += delta;
 
   for (let i = 0; i < sprites.length; ++i) {
-    if (Math.random() < 0.01) {
-      if (sprites[i].x < 0) {
-        vel_x[i] = 4
-      } else if (sprites[i].x > window.innerWidth) {
-        vel_x[i] = 0
-      }
-      if (sprites[i].y < 0) {
-        vel_y[i] = 4
-      } else if (sprites[i].y > window.innerHeight) {
-        vel_y[i] = 0
-      }
+    let fixed = false;
+    if (sprites[i].x < 0) {
+      vel_x[i] = 4;
+      fixed = true;
+    } else if (sprites[i].x > window.innerWidth) {
+      vel_x[i] = 0;
+      fixed = true;
+    }
+    if (sprites[i].y < 0) {
+      vel_y[i] = 4;
+      fixed = true;
+    } else if (sprites[i].y > window.innerHeight) {
+      vel_y[i] = 0;
+      fixed = true;
+    }
 
+    if (!fixed && Math.random() < 0.01) {
       vel_x[i] = getRandomInt(5)
       vel_y[i] = getRandomInt(5)
     }
