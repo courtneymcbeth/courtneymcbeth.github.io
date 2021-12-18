@@ -75,14 +75,17 @@ nav ul li a, nav div a {
 .center-middle h1 {
   font-weight: 400;
   font-size: 70pt;
+  color: #F6F2F3;
 }
 
 .center-middle h2 {
   font-size: 40pt;
+  color: #F6F2F3;
 }
 
 .center-middle h3 {
   font-size: 30pt;
+  color: #F6F2F3;
 }
 
 #square-links {
@@ -122,10 +125,12 @@ nav ul li a, nav div a {
 
 .content p {
   font-size: 18pt;
+  text-align: justify;
 }
 
 .green {
   background-color: #3AA95C;
+  color: #F6F2F3;
 }
 
 footer {
@@ -139,6 +144,7 @@ footer h6 {
   text-align: end;
   margin: 5px 100px;
   font-size: 10pt;
+  color: #F6F2F3;
 }
 
 #project-main-title {
