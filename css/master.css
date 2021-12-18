@@ -4,6 +4,7 @@
   font-family: 'Khula', sans-serif;
   font-weight: 300;
   line-height: 1.1;
+  color: rgb(9, 14, 41);
 }
 
 html, body {
@@ -141,10 +142,8 @@ footer h6 {
 }
 
 #project-main-title {
-  background-color: #3AA95C;
-  color: #F6F2F3;
   padding-top: 10vh;
-  padding-bottom: 10vh;
+  padding-bottom: 5vh;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -171,6 +170,10 @@ footer h6 {
 .proj-side {
   display: flex;
   flex-direction: column;
+}
+
+.proj-side p {
+  text-align: justify;
 }
 
 .left-proj {
