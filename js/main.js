@@ -40,8 +40,8 @@ for (let i = 0; i < alphas.length; ++i) {
     var sprite = new PIXI.Sprite(texture);
     sprites.push(sprite)
 
-    sprite.y = getRandomInt(window.innerHeight)
-    sprite.x = getRandomInt(window.innerWidth)
+    sprite.y = getRandomInt(window.innerHeight * 2)
+    sprite.x = getRandomInt(window.innerWidth * 2)
 
     vel_x.push(0)
     vel_y.push(0)
