@@ -141,10 +141,22 @@ footer h6 {
 }
 
 #project-main-title {
+  background-color: #3AA95C;
+  color: #F6F2F3;
   padding-top: 10vh;
+  padding-bottom: 10vh;
   text-align: center;
   display: flex;
   flex-direction: column;
+}
+
+#project-main-title h1 {
+  font-size: 30pt;
+  margin-bottom: 20px;
+}
+
+#project-main-title p {
+  font-size: 18pt;
 }
 
 .proj-main {
@@ -154,4 +166,18 @@ footer h6 {
   padding-right: 10vw;
   padding-top: 5vh;
   padding-bottom: 5vh;
+}
+
+.proj-side {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-proj {
+  align-content: flex-end;
+  align-items: flex-end;
+}
+
+.proj-side h2, .proj-side h3 {
+  margin-bottom: 10px;
 }
