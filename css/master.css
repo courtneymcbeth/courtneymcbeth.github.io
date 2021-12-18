@@ -146,6 +146,11 @@ footer h6 {
   color: #F6F2F3;
 }
 
+#research {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 #project-main-title {
   padding-top: 10vh;
   padding-bottom: 5vh;
