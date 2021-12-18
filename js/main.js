@@ -47,11 +47,7 @@ for (let i = 0; i < alphas.length; ++i) {
   }
 }
 
-let elapsed = 0.0;
-ticks = 0
 app.ticker.add((delta) => {
-  elapsed += delta;
-
   for (let i = 0; i < sprites.length; ++i) {
     let fixed = false;
     if (sprites[i].x < 10) {
@@ -77,6 +73,4 @@ app.ticker.add((delta) => {
     sprites[i].x += (vel_x[i] - 2) / 4.0
     sprites[i].y += (vel_y[i] - 2) / 4.0
   }
-
-  ticks += 1
 });
