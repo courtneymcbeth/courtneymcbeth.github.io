@@ -132,6 +132,10 @@ nav ul li a, nav div a {
   color: #F6F2F3;
 }
 
+.green h1, .green h2, .green h3, .green h4, .green h5, .green h6, .green p, .green a {
+  color: #F6F2F3;
+}
+
 footer {
   background-color: rgb(9, 14, 41);
   color: #F6F2F3;
@@ -146,9 +150,14 @@ footer h6 {
   color: #F6F2F3;
 }
 
-#research {
+.r-cards {
   display: flex;
   justify-content: space-evenly;
+}
+
+.r-main img {
+  width: 200px;
+  height: 200px;
 }
 
 #project-main-title {
