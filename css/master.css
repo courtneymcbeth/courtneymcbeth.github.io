@@ -93,12 +93,15 @@ nav ul li a, nav div a {
 #square-links a {
   background-color: #3AA95C;
   color: #F6F2F3;
-  width: 200px;
+  width: 180px;
   font-size: 22pt;
+  text-decoration: none;
+  padding: 10px;
+  border: #F6F2F3 3px solid;
 }
 
 .content {
-  width: 100vw;
+  width: 70vw;
   padding-top: 50px;
   padding-bottom: 50px;
   padding-left: 15vw;
