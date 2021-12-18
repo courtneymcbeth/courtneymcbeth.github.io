@@ -156,7 +156,7 @@ footer h6 {
 
 .r-cards {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .r-main {
@@ -209,8 +209,12 @@ footer h6 {
   text-align: justify;
 }
 
-.proj-side a {
+.proj-side:not(.green) a {
   color: rgb(9, 14, 41);
+}
+
+.proj-side h3 {
+  font-style: italic;
 }
 
 .left-proj {
