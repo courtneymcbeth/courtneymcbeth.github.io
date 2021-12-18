@@ -160,6 +160,8 @@ footer h6 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .r-main img {
@@ -173,7 +175,6 @@ footer h6 {
   text-align: center;
   display: flex;
   flex-direction: column;
-  border-bottom: #3AA95C 2px solid;
 }
 
 #project-main-title h1 {
