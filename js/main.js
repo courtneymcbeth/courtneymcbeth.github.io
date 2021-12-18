@@ -14,7 +14,7 @@ let app = new PIXI.Application({
 });
 document.body.prepend(app.view);
 
-var container = new PIXI.Container();
+var container = new PIXI.ParticleContainer();
 app.stage.addChild(container);
 
 // Bubbles
@@ -60,14 +60,14 @@ app.ticker.add((delta) => {
     if (sprites[i].x < 10) {
       vel_x[i] = 4;
       fixed = true;
-    } else if (sprites[i].x > window.innerWidth - 10) {
+    } else if (sprites[i].x > window.innerWidth * 2 - 10) {
       vel_x[i] = 0;
       fixed = true;
     }
     if (sprites[i].y < 10) {
       vel_y[i] = 4;
       fixed = true;
-    } else if (sprites[i].y > window.innerHeight - 10) {
+    } else if (sprites[i].y > window.innerHeight * 2 - 10) {
       vel_y[i] = 0;
       fixed = true;
     }
