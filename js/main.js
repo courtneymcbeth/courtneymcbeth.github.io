@@ -32,7 +32,7 @@ for (let i = 0; i < alphas.length; ++i) {
   var gr = new PIXI.Graphics();
   gr.beginFill(0x3AA95C, alpha);
   gr.lineStyle(0);
-  gr.drawCircle(60, 60, 60);
+  gr.drawCircle(60, 60, 120);
   gr.endFill();
 
   for (let j = 0; j < num_per_color; ++j) {
@@ -54,6 +54,7 @@ container.cacheAsBitmap = true;
 container.scale.set(0.5);
 
 app.ticker.add((delta) => {
+  container.cacheAsBitmap = false;
   for (let i = 0; i < sprites.length; ++i) {
     let fixed = false;
     if (sprites[i].x < 10) {
@@ -79,4 +80,5 @@ app.ticker.add((delta) => {
     sprites[i].x += (vel_x[i] - 2) / 4.0
     sprites[i].y += (vel_y[i] - 2) / 4.0
   }
+  container.cacheAsBitmap = true;
 });
