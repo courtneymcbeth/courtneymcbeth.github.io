@@ -20,6 +20,64 @@
 </head>
 
 <body>
+  {% include navbar.html %}
+
+  <div id="project-main-title">
+    <h1>Projects</h1>
+    <p>Below is a collection of both my personal projects and others that I've contributed to.</p>
+  </div>
+
+  <div class="proj-main">
+    <img class="prog-img" src="{{site.baseurl}}/images/cusail.jpg" />
+
+    <div class="proj-side">
+      <h2>Cornell Autonomous Sailboat Team</h2>
+      <h3>Navigation Team Lead</h3>
+      <p>
+        The Cornell Autonomous Sailboat Team, or CUSail, aims to build a completely autonomous robotic sailboat for
+        competition at the Sailbot International Robotic Sailing Regatta. As the lead of the Navigation subteam, I lead
+        a team of undergraduates to develop the software and hardware that allowed the boat to sail to a target
+        location. More information about CUSail can be found on their <a
+          href="https://cusail.engineering.cornell.edu/">website.</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="proj-main">
+    <div class="proj-side">
+      <h2>Piano Playing Robot</h2>
+      <h3>Personal Project</h3>
+      <p>
+        This was a project I undertook the summer after my sophomore year at Cornell. I had been trying to teach myself
+        to play piano, but I just wasn't getting it, so I decided to build a robot to play for me. If you're interested
+        in seeing how I pieced it together, you can check out my page on the <a
+          href="https://create.arduino.cc/projecthub/cmcbeth5287/pianobot-80bae6?ref=user&ref_id=1130744&offset=0">Arduino
+          Project Hub.</a> Forgive the mess, version 2.0 is the in the works and promises to be a big improvement.
+      </p>
+    </div>
+
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/MbbfQTQui9s"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+
+  <div class="proj-main">
+    <iframe src="https://drive.google.com/file/d/11HLJwqdgah-r07tEVI2ogMHwxMJiJM5A/preview" width="560"
+      height="315"></iframe>
+
+    <div class="proj-side">
+      <h2>Maze Mapping Robot</h2>
+      <h3>Cornell ECE 3400 Project</h3>
+      <p>
+        During my junior year at Cornell, I worked with a team to build a maze mapping robot for a class project. It
+        uses depth first search to visit every block in the maze and build an occupancy map. It also uses IR sensors to
+        detect other robots in the maze and avoid collisions.
+      </p>
+    </div>
+  </div>
+
+  {% include footer.html %}
 
 </body>
 

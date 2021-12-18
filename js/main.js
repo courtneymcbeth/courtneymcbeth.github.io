@@ -54,17 +54,17 @@ app.ticker.add((delta) => {
 
   for (let i = 0; i < sprites.length; ++i) {
     let fixed = false;
-    if (sprites[i].x < 0) {
+    if (sprites[i].x < 10) {
       vel_x[i] = 4;
       fixed = true;
-    } else if (sprites[i].x > window.innerWidth) {
+    } else if (sprites[i].x > window.innerWidth - 10) {
       vel_x[i] = 0;
       fixed = true;
     }
-    if (sprites[i].y < 0) {
+    if (sprites[i].y < 10) {
       vel_y[i] = 4;
       fixed = true;
-    } else if (sprites[i].y > window.innerHeight) {
+    } else if (sprites[i].y > window.innerHeight - 10) {
       vel_y[i] = 0;
       fixed = true;
     }
