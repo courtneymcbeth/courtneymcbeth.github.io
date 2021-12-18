@@ -14,7 +14,7 @@ let app = new PIXI.Application({
 });
 document.body.prepend(app.view);
 
-var container = new PIXI.ParticleContainer();
+var container = new PIXI.Container();
 app.stage.addChild(container);
 
 // Bubbles
