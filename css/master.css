@@ -88,16 +88,18 @@ nav ul li a, nav div a {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 20px;
 }
 
 #square-links a {
   background-color: #3AA95C;
   color: #F6F2F3;
-  width: 180px;
-  font-size: 22pt;
+  width: 150px;
+  font-size: 20pt;
   text-decoration: none;
   padding: 10px;
   border: #F6F2F3 3px solid;
+  text-align: center;
 }
 
 .content {
